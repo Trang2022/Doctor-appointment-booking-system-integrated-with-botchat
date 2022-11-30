@@ -36,21 +36,18 @@ class VerifyEmail extends Component {
       }
     }
   }
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    if (this.props.language !== prevProps.language) {
-    }
-  }
+  componentDidUpdate(prevProps, prevState, snapshot) {}
   render() {
     let { statusVerify, errCode } = this.state;
     return (
       <>
         <HomeHeader />
-        <PaymentDetails />
         <div className="verify-email-container">
           {statusVerify === false ? (
             <div>Loading data ....</div>
           ) : (
             <div>
+              {" "}
               {+errCode === 0 ? (
                 <div>
                   <div>
@@ -59,15 +56,14 @@ class VerifyEmail extends Component {
                       alt="Xác nhận thành công"
                     />
                   </div>
-                  <button></button>
                   <div className="infor-booking">
                     Xác nhận lịch hẹn thành công
                   </div>
+                  <PaymentDetails />
                 </div>
               ) : (
                 <div>
                   <div>
-                    {" "}
                     <img
                       src="https://image.freepik.com/free-vector/red-green-ok-not-ok-icons_17-1106090017.jpg"
                       alt="Xác nhận không thành công"

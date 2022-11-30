@@ -86,20 +86,20 @@ let postVerifyBookAppointment = (data) => {
           },
           raw: false,
         });
-        // if (appointment) {
-        //   appointment.statusId = "S2";
-        //   await appointment.save();
-        resolve({
-          errCode: 0,
-          errMessage: " successed",
-        });
-        // } else {
-        // resolve({
-        //   errCode: 2,
-        //   errMessage: "Appointment has been activated or does not exits",
-        // });
+        if (appointment) {
+          appointment.statusId = "S2";
+          await appointment.save();
+          resolve({
+            errCode: 0,
+            errMessage: "Update the appointment successed",
+          });
+        } else {
+          resolve({
+            errCode: 2,
+            errMessage: "Appointment has been activated or does not exits",
+          });
+        }
       }
-      // }
     } catch (e) {
       // console.log(e);
       reject(e);
