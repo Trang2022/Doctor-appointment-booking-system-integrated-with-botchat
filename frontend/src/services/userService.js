@@ -67,6 +67,10 @@ const postPatientBookAppointment = (data) => {
   return axios.post(`/api/patient-book-appointment`, data);
 };
 
+const postPatientPayment = (data) => {
+  return axios.post(`/api/patient-payment`, data);
+};
+
 const postVerifyBookAppointment = (data) => {
   return axios.post(`/api/verify-book-appointment`, data);
 };
@@ -168,4 +172,5 @@ export {
   deleteHandbook,
   editHandbookService,
   getAllDetailHandBookById,
+  postPatientPayment,
 };

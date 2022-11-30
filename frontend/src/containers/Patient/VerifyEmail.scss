@@ -4,7 +4,13 @@
   align-items: center;
   text-align: center;
   min-height: 100vh;
+
+  img {
+    height: 300px;
+    width: 300px;
+  }
   .infor-booking {
+    padding-top: 50px;
     font-size: 17px;
     font-weight: 600;
 

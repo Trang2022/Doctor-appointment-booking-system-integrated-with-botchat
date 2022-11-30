@@ -112,7 +112,29 @@ let buildUrlEmail = (doctorId, token) => {
   return result;
 };
 
+let postPatientPayment = (data) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      if (!data.number || !data.name || !data.expiry || !data.cvc) {
+        //
+        resolve({
+          errCode: 1,
+          errMessage: "Missing parameter",
+        });
+      } else {
+        resolve({
+          errCode: 0,
+          errMessage: "Save infor patient succeed!",
+        });
+      }
+    } catch (e) {
+      reject(e);
+    }
+  });
+};
+
 module.exports = {
   postBookAppointment: postBookAppointment,
   postVerifyBookAppointment: postVerifyBookAppointment,
+  postPatientPayment: postPatientPayment,
 };

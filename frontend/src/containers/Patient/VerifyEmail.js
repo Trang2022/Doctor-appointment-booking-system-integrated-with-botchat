@@ -4,7 +4,8 @@ import { postVerifyBookAppointment } from "../../services/userService";
 import "./VerifyEmail.scss";
 import HomeHeader from "../HomePage/HomeHeader";
 
-// import Confirm from "../../assets/images/thanhcong.png";
+import PaymentDetails from "../Patient/PaymentDetails";
+
 class VerifyEmail extends Component {
   constructor(props) {
     super(props);
@@ -44,24 +45,39 @@ class VerifyEmail extends Component {
     return (
       <>
         <HomeHeader />
+        <PaymentDetails />
         <div className="verify-email-container">
           {statusVerify === false ? (
             <div>Loading data ....</div>
           ) : (
             <div>
-              {" "}
               {+errCode === 0 ? (
                 <div>
-                  {/* <div><img src={Confirm} alt="" /></div> */}
+                  <div>
+                    <img
+                      src="https://www.controls-explorer.com/wp-content/uploads/2017/04/Tik-Mark-300x293.png"
+                      alt="Xác nhận thành công"
+                    />
+                  </div>
+                  <button></button>
                   <div className="infor-booking">
                     Xác nhận lịch hẹn thành công
                   </div>
                 </div>
               ) : (
-                <div className="infor-booking">
-                  Lịch hẹn không tồn tại hoặc đã được xác nhận
+                <div>
+                  <div>
+                    {" "}
+                    <img
+                      src="https://image.freepik.com/free-vector/red-green-ok-not-ok-icons_17-1106090017.jpg"
+                      alt="Xác nhận không thành công"
+                    />
+                  </div>
+                  <div className="infor-booking">
+                    Lịch hẹn không tồn tại hoặc đã được xác nhận
+                  </div>
                 </div>
-              )}{" "}
+              )}
             </div>
           )}
         </div>
