@@ -2,7 +2,7 @@
 const { BOOLEAN } = require("sequelize");
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class History extends Model {
+  class Payment extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -12,17 +12,17 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  History.init(
+  Payment.init(
     {
-      patientid: DataTypes.INTEGER,
-      doctorId: DataTypes.INTEGER,
-      description: DataTypes.TEXT,
-      files: DataTypes.TEXT,
+      number: DataTypes.INTEGER,
+      name: DataTypes.STRING,
+      expiry: DataTypes.INTEGER,
+      cvc: DataTypes.INTEGER,
     },
     {
       sequelize,
-      modelName: "History",
+      modelName: "Payment",
     }
   );
-  return History;
+  return Payment;
 };

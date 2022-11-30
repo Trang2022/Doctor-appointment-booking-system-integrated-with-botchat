@@ -14,7 +14,7 @@ import "react-credit-cards/es/styles-compiled.css";
 
 import "./PaymentDetails.scss";
 
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 
 import { postPatientPayment } from "../../services/userService";
 
@@ -27,7 +27,6 @@ export default class App extends React.Component {
     issuer: "",
     focused: "",
     formData: null,
-    isShowLoading: false,
   };
 
   handleCallback = ({ issuer }, isValid) => {
@@ -69,27 +68,20 @@ export default class App extends React.Component {
   };
 
   showToastMessagePay = async (event) => {
-    this.setState({
-      isShowLoading: true,
-    });
     let res = await postPatientPayment({
       number: this.state.number,
       name: this.state.name,
       expiry: this.state.expiry,
       cvc: this.state.cvc,
     });
-    if (res && res.errCode === 0) {
-      toast.success("Success Notification !", {
-        position: toast.POSITION.BOTTOM_RIGHT,
-      });
-    } else {
-      toast.error(" Error Notification !");
-    }
-    this.setState({
-      isShowLoading: false,
-    });
-  };
 
+    if (res && res.errCode === 0) {
+      toast.success("Booking a new appointment succeed!");
+    } else {
+      toast.error(" Booking a new appointment error!");
+    }
+    // console.log("check confirm button: ", this.state);
+  };
   render() {
     const { name, number, expiry, cvc, focused, issuer, formData } = this.state;
 
@@ -164,7 +156,6 @@ export default class App extends React.Component {
               >
                 PAY
               </button>
-              <ToastContainer />
             </div>
           </form>
           {/* {formData && (
