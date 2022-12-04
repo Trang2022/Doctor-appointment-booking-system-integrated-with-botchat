@@ -7,11 +7,15 @@ import Header from "../containers/Header/Header";
 
 import ManageDoctor from "../containers/System/Admin/ManageDoctor";
 import ManageSpecialty from "../containers/System/Specialty/ManageSpecialty";
+import ManagerSpecialtyList from "../containers/System/Specialty/ManagerSpecialtyList";
+
 import ManageClinic from "../containers/System/Clinic/ManageClinic";
 import ManagerClinicList from "../containers/System/Clinic/ManagerClinicList";
-import ManagerSpecialtyList from "../containers/System/Specialty/ManagerSpecialtyList";
 import ManagerHandbook from "../containers/System/Handbook/ManageHandbook";
 import ManageHandbookList from "../containers/System/Handbook/ManageHandbookList";
+
+import BarChart from "../containers/System/Chart/BarChart";
+
 class System extends Component {
   render() {
     const { systemMenuPath, isLoggedIn } = this.props;
@@ -46,6 +50,7 @@ class System extends Component {
                 path="/system/manage-handbook-list"
                 component={ManageHandbookList}
               />
+              <Route path="/system/manage-chart" component={BarChart} />
               <Route
                 component={() => {
                   return <Redirect to={systemMenuPath} />;

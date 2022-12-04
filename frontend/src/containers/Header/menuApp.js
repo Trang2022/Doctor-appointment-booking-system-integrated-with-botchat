@@ -84,6 +84,38 @@ export const adminMenu = [
       },
     ],
   },
+
+  {
+    //quan ly biểu đô
+
+    name: "menu.admin.chart",
+    menus: [
+      {
+        name: "menu.admin.manage-chart",
+        link: "/system/manage-chart",
+      },
+      // {
+      //   name: "menu.admin.manage-handbook-list",
+      //   link: "/system/manage-handbook-list",
+      // },
+    ],
+  },
+
+  {
+    //quan ly Doanh thu
+
+    name: "menu.admin.revenue",
+    menus: [
+      {
+        name: "menu.admin.manage-revenue",
+        link: "/system/manage-revenue",
+      },
+      {
+        name: "menu.admin.manage-revenue-month",
+        link: "/system/manage-revenue-month",
+      },
+    ],
+  },
 ];
 export const doctorMenu = [
   {

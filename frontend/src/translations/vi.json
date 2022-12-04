@@ -14,7 +14,12 @@
       "manage-handbook": "Quản lý cẩm nang",
       "manage-clinic-list": "Danh sách quản lý phòng khám",
       "manage-specialty-list": "Danh sách quản lý chuyên khoa",
-      "manage-handbook-list": "Danh sách quản lý cẩm nang"
+      "manage-handbook-list": "Danh sách quản lý cẩm nang",
+      "chart": "Thống kê",
+      "manage-chart": "Thống kê",
+      "revenue": "Doanh thu",
+      "manage-revenue": "Doanh thu",
+      "manage-revenue-month": "Doanh thu theo tháng"
     },
     "doctor": {
       "manage-schedule": "Quản lý kế hoạch khám bệnh",
