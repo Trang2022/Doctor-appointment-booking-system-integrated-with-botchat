@@ -59,8 +59,8 @@ class ManageClinicList extends Component {
   };
   handleDeleteUser = async (item) => {
     swal({
-      title: "Xóa chuyên khoa?",
-      text: "Bạn có chắc chắn xóa chuyên khoa này?",
+      title: "Xóa phòng khám?",
+      text: "Bạn có chắc chắn xóa phòng khám này?",
       icon: "warning",
       dangerMode: true,
       buttons: {

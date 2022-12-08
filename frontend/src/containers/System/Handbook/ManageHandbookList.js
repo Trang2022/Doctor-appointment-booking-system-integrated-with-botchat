@@ -65,8 +65,8 @@ class ManageHandList extends Component {
   };
   handleDeleteUser = async (item) => {
     swal({
-      title: "Xóa chuyên khoa?",
-      text: "Bạn có chắc chắn xóa chuyên khoa này?",
+      title: "Xóa cẩm nang?",
+      text: "Bạn có chắc chắn xóa cẩm nang này?",
       icon: "warning",
       dangerMode: true,
       buttons: {

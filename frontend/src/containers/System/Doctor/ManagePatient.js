@@ -145,31 +145,40 @@ class ManagePatient extends Component {
                       <th>Thời gian</th>
                       <th> Họ và tên</th>
                       <th>Địa chỉ</th>
-                      <th>Giới tính</th>
+                      {/* <th>Giới tính</th> */}
                       <th>Hành động</th>
                     </tr>
                     {dataPatient && dataPatient.length > 0 ? (
                       dataPatient.map((item, index) => {
+                        let time =
+                          language === LANGUAGES.VI
+                            ? item.timeDataPatient.valueVi
+                            : item.timeDataPatient.valueEn;
+                        let gender =
+                          language === LANGUAGES.VI
+                            ? item.patientData.valueVi
+                            : item.patientData.valueEn;
+
                         return (
                           <tr key={index}>
                             <td>{index + 1}</td>
                             <td>{item.timeDataPatient.valueVi}</td>
                             <td>{item.patientData.firstName}</td>
                             <td>{item.patientData.address}</td>
-                            <td>{item.patientData.genderData.valueVi}</td>
+                            {/* <td>{item.patientData.genderData.valueVi}</td> */}
                             <td>
                               <button
                                 onClick={() => this.handleBtnConfirm(item)}
                                 className="mp-btn-confirm"
                               >
-                                Xác nhận
+                                Gửi hóa đơn
                               </button>
                               <button className="mp-btn-cancel">Hủy</button>
                               <button
                                 className="mp-btn-remedy"
                                 onClick={() => this.handleBtnRemedy()}
                               >
-                                Gửi hóa đơn
+                                Xác nhận
                               </button>
                             </td>
                           </tr>

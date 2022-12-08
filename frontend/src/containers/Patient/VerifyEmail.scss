@@ -3,7 +3,17 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
+  min-height: 10vh;
+  .paypal {
+    margin-top: 20px;
+    background-color: lightskyblue;
+    // border: 2px solid red;
+    border-radius: 12px;
+    padding: 20px;
+    h5 {
+      padding-bottom: 15px;
+    }
+  }
 
   img {
     height: 300px;

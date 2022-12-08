@@ -66,7 +66,7 @@ class ManageClinic extends Component {
     return (
       <>
         <div className="manage-specialty-container">
-          <div className="ms-title">Quản lý chuyên khoa</div>
+          <div className="ms-title">Quản lý phòng khám</div>
           <div className="add-new-specialty row">
             <div className="col-6 form-group input-form">
               <label htmlFor="">Tên phòng khám</label>

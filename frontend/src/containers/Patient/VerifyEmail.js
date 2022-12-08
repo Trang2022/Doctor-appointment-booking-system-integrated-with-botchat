@@ -4,7 +4,7 @@ import { postVerifyBookAppointment } from "../../services/userService";
 import "./VerifyEmail.scss";
 import HomeHeader from "../HomePage/HomeHeader";
 
-import PaymentDetails from "../Patient/PaymentDetails";
+import Paypal from "../Patient/Paypal";
 
 class VerifyEmail extends Component {
   constructor(props) {
@@ -59,7 +59,7 @@ class VerifyEmail extends Component {
                   <div className="infor-booking">
                     Xác nhận lịch hẹn thành công
                   </div>
-                  <PaymentDetails />
+                  <Paypal />
                 </div>
               ) : (
                 <div>

@@ -63,7 +63,7 @@ class ManageHandbook extends Component {
     return (
       <>
         <div className="manage-Handbook-container">
-          <div className="ms-title">Quản lý chuyên khoa</div>
+          <div className="ms-title">Quản lý cẩm nang</div>
           <div className="add-new-Handbook row">
             <div className="col-6 form-group input-form">
               <label htmlFor="">Tên Bài Viết </label>

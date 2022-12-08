@@ -38,8 +38,6 @@ class DetailDoctor extends Component {
   }
   componentDidUpdate(prevProps, prevState, snapshot) {}
   render() {
-    let key = "yourKey";
-    let rating = "";
     let { language } = this.props;
     let { detailDoctor } = this.state;
     let nameVi = "",

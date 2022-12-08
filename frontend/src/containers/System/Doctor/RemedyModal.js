@@ -108,10 +108,10 @@ class RemedyModal extends Component {
               color="primary"
               onClick={() => this.handleSendRemedyModal()}
             >
-              Send
+              Gửi
             </Button>
             <Button color="secondary" onClick={closeRemedyModal}>
-              Cancel
+              Hủy
             </Button>
           </ModalFooter>
         </Modal>
