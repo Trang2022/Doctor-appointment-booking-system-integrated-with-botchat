@@ -72,8 +72,8 @@ class HomeHeader extends Component {
             <div className="content-up">
               <div className="title1">CHĂM SÓC SỨC KHỎE TOÀN DIỆN </div>
               <div className="search">
+                <input type="text" placeholder="Nhập nội dung cần tìm" />
                 <i className="fas fa-search"></i>
-                <input type="text" placeholder="...." />
               </div>
             </div>
             <div className="content-down">

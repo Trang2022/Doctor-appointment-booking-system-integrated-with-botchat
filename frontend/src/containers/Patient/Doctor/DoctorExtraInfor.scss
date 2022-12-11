@@ -48,10 +48,16 @@
       }
     }
   }
+
   .payment {
     border: 1px solid #ddd;
     padding: 5px;
     background-color: #eee;
+    padding-bottom: 5px;
+
+    .right {
+      float: right;
+    }
   }
   .hide-price {
     margin-top: 10px;

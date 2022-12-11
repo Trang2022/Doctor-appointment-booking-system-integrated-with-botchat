@@ -59,3 +59,11 @@ app.listen(port, () => {
   //callback
   console.log("Backend Nodejs is runing on the port : " + port);
 });
+
+app.get("/api/bookings", (req, res) => {
+  var sql = " SELECT * FROM bookings ORDER BY patientId DESC";
+  connection.query(sql, function (err, results) {
+    if (err) throw err;
+    res.json({ news: results });
+  });
+});

@@ -202,7 +202,7 @@ class BookingModal extends Component {
                     isShowDescriptionDoctor={false}
                     dateTime={dataTime}
                     isShowLinkDetail={true}
-                    isShowPrice={false}
+                    isShowPrice={true}
                   />
                 </div>
               </div>

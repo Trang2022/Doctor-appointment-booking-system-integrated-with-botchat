@@ -38,14 +38,12 @@ class DetailDoctor extends Component {
   }
   componentDidUpdate(prevProps, prevState, snapshot) {}
   render() {
-    let { language } = this.props;
     let { detailDoctor } = this.state;
-    let nameVi = "",
-      nameEn = "";
-    if (detailDoctor && detailDoctor.positionData) {
-      nameVi = `${detailDoctor.positionData.valueVi}, ${detailDoctor.lastName} ${detailDoctor.firstName}`;
-      nameEn = `${detailDoctor.positionData.valueEn}, ${detailDoctor.firstName} ${detailDoctor.lastName}`;
-    }
+
+    let nameDoctor = `${detailDoctor.positionData &&
+      detailDoctor.positionData.valueVi}, ${detailDoctor.lastName} ${
+      detailDoctor.firstName
+    }`;
     let currentURL =
       process.env.REACT_APP_IS_LOCALHOST === 1 + window.location.href;
     // console.log(`currentURL`, currentURL);
@@ -65,7 +63,7 @@ class DetailDoctor extends Component {
             ></div>
             <div className="content-right">
               <div className="up">
-                <h2> {language === LANGUAGES.VI ? nameVi : nameEn}</h2>
+                <h2> {nameDoctor}</h2>
               </div>
               <div className="down">
                 {detailDoctor &&
@@ -116,9 +114,7 @@ class DetailDoctor extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return {
-    language: state.app.language,
-  };
+  return {};
 };
 
 const mapDispatchToProps = (dispatch) => {

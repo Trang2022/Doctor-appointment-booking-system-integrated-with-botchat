@@ -83,11 +83,9 @@ class ProfileDoctor extends Component {
       isShowPrice,
     } = this.props;
 
-    let nameVi = "",
-      nameEn = "";
+    let nameDoctor = "";
     if (dataProfile && dataProfile.positionData) {
-      nameVi = `${dataProfile.positionData.valueVi}, ${dataProfile.lastName} ${dataProfile.firstName} `;
-      nameEn = `${dataProfile.positionData.valueVi}, ${dataProfile.firstName} ${dataProfile.lastName} `;
+      nameDoctor = `${dataProfile.positionData.valueVI}, ${dataProfile.lastName} ${dataProfile.firstName} `;
     }
 
     console.log("check doctorID:", dateTime);
@@ -103,9 +101,7 @@ class ProfileDoctor extends Component {
             }}
           ></div>
           <div className="content-right">
-            <div className="up">
-              {language === LANGUAGES.VI ? nameVi : nameEn}
-            </div>
+            <div className="up">{nameDoctor}</div>
             <div className="down">
               {isShowDescriptionDoctor === true ? (
                 <>
@@ -122,18 +118,18 @@ class ProfileDoctor extends Component {
           </div>
         </div>
 
-        {isShowLinkDetail === true && (
+        {/* {isShowLinkDetail === true && (
           <div className="view-detail-doctor">
             <Link to={`/detail-doctor/${doctorId}`}>Xem thêm ...</Link>
           </div>
-        )}
-        {isShowPrice && (
+        )} */}
+        {isShowPrice === true && (
           <div className="price">
             Giá khám: &nbsp;
             {dataProfile && dataProfile.Doctor_Infor && (
               <NumberFormat
                 className="currency"
-                value={dataProfile.Doctor_Infor.priceTypeData.valueVI}
+                value={dataProfile.Doctor_Infor.priceData.valueVI}
                 displayType={"text"}
                 thousandSeparator={true}
                 suffix={"VND"}

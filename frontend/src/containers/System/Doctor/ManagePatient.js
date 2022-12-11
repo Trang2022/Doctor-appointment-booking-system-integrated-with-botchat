@@ -145,7 +145,7 @@ class ManagePatient extends Component {
                       <th>Thời gian</th>
                       <th> Họ và tên</th>
                       <th>Địa chỉ</th>
-                      {/* <th>Giới tính</th> */}
+                      <th>Giới tính</th>
                       <th>Hành động</th>
                     </tr>
                     {dataPatient && dataPatient.length > 0 ? (
@@ -165,7 +165,7 @@ class ManagePatient extends Component {
                             <td>{item.timeDataPatient.valueVi}</td>
                             <td>{item.patientData.firstName}</td>
                             <td>{item.patientData.address}</td>
-                            {/* <td>{item.patientData.genderData.valueVi}</td> */}
+                            <td>{item.patientData.genderData.valueVi}</td>
                             <td>
                               <button
                                 onClick={() => this.handleBtnConfirm(item)}
@@ -173,13 +173,13 @@ class ManagePatient extends Component {
                               >
                                 Gửi hóa đơn
                               </button>
-                              <button className="mp-btn-cancel">Hủy</button>
+                              {/* <button className="mp-btn-cancel">Hủy</button>
                               <button
                                 className="mp-btn-remedy"
                                 onClick={() => this.handleBtnRemedy()}
                               >
                                 Xác nhận
-                              </button>
+                              </button> */}
                             </td>
                           </tr>
                         );

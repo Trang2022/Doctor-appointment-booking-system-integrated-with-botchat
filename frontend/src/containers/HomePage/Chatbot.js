@@ -11,7 +11,8 @@ class Review extends Component {
     this.state = {
       name: "",
       gender: "",
-      age: "",
+      // age: "",
+      reason: "",
     };
   }
 
@@ -26,21 +27,25 @@ class Review extends Component {
     const { name, gender, age } = this.state;
     return (
       <div style={{ width: "100%" }}>
-        <h3>Summary</h3>
+        <h3>Tóm tắt</h3>
         <table>
           <tbody>
             <tr>
-              <td>Name</td>
+              <td>Tên</td>
               <td>{name.value}</td>
             </tr>
             <tr>
-              <td>Gender</td>
+              <td>Giới tính</td>
               <td>{gender.value}</td>
             </tr>
             <tr>
-              <td>Age</td>
+              <td>Tuổi</td>
               <td>{age.value}</td>
             </tr>
+            {/* <tr>
+              <td>Lý do</td>
+              <td>{reason.value}</td>
+            </tr> */}
           </tbody>
         </table>
       </div>
@@ -59,7 +64,7 @@ Review.defaultProps = {
 const steps = [
   {
     id: "0",
-    message: "HI!",
+    message: "Xin chào!",
 
     // This calls the next id
     // i.e. id 1 in this case
@@ -75,30 +80,21 @@ const steps = [
   },
   {
     id: "2",
-    message: " hi {previousValue}, how can I help you?",
+    message: " Chúng tôi có thể giúp gì cho bạn?",
+
     trigger: "3",
   },
   {
     id: "3",
-    options: [
-      // When we need to show a number of
-      // options to choose we create alist
-      // like this
-      { value: 1, label: "Medical examination", trigger: "4" },
-      { value: 2, label: "Find Doctor Information", trigger: "4" },
-      {
-        value: 3,
-        label: "Learn about medical examination rates",
-        trigger: "4",
-      },
-    ],
+    user: true,
+    trigger: "4",
   },
   {
     id: "4",
 
     // This message appears in
     // the bot chat bubble
-    message: "Please write your username",
+    message: "Vui lòng cho chúng tôi biết họ và tên",
     trigger: "name",
   },
   {
@@ -108,19 +104,19 @@ const steps = [
   },
   {
     id: "5",
-    message: "Hi {previousValue}! What is your gender?",
+    message: "Xin chào {previousValue}! Vui lòng chọn giới tính?",
     trigger: "gender",
   },
   {
     id: "gender",
     options: [
-      { value: "male", label: "Male", trigger: "6" },
-      { value: "female", label: "Female", trigger: "6" },
+      { value: "Nam", label: "Nam", trigger: "6" },
+      { value: "Nữ", label: "Nữ", trigger: "6" },
     ],
   },
   {
     id: "6",
-    message: "How old are you?",
+    message: "Bạn bao nhiêu tuổi?",
     trigger: "age",
   },
   {
@@ -141,7 +137,7 @@ const steps = [
   },
   {
     id: "7",
-    message: "Great! Check out your summary",
+    message: "Tuyệt! Kiểm tra tóm tắt của bạn",
     trigger: "review",
   },
   {
@@ -152,27 +148,28 @@ const steps = [
   },
   {
     id: "update",
-    message: "Do you want to update some information?",
+    message: "Bạn có muốn cập nhật một số thông tin?",
     trigger: "update-question",
   },
   {
     id: "update-question",
     options: [
-      { value: "yes", label: "Yes", trigger: "update-yes" },
-      { value: "no", label: "No", trigger: "end-message" },
+      { value: "yes", label: "Có", trigger: "update-yes" },
+      { value: "no", label: "Không", trigger: "end-message" },
     ],
   },
   {
     id: "update-yes",
-    message: "What field would you like to update?",
+    message: "Bạn muốn cập nhật thông tin nào?",
     trigger: "update-fields",
   },
   {
     id: "update-fields",
     options: [
-      { value: "name", label: "Name", trigger: "update-name" },
-      { value: "gender", label: "Gender", trigger: "update-gender" },
-      { value: "age", label: "Age", trigger: "update-age" },
+      { value: "name", label: "Tên", trigger: "update-name" },
+      { value: "gender", label: "Giới tính", trigger: "update-gender" },
+      { value: "age", label: "Tuổi", trigger: "update-age" },
+      // { value: "reason", label: "Lý do", trigger: "update-reason" },
     ],
   },
   {
@@ -190,9 +187,15 @@ const steps = [
     update: "age",
     trigger: "7",
   },
+  // {
+  //   id: "update-reason",
+  //   update: "reason",
+  //   trigger: "7",
+  // },
+
   {
     id: "end-message",
-    message: "Thanks! Your data was submitted successfully!",
+    message: "Cảm ơn! Dữ liệu của bạn đã được gửi thành công!",
     end: true,
   },
 ];

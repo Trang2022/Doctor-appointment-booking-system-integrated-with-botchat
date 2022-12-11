@@ -22,6 +22,10 @@ class HomePage extends Component {
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      pausoOnHover: true,
+      pauseOnFocus: true,
     };
     return (
       <div>

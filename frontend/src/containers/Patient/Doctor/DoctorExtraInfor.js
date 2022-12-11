@@ -96,34 +96,14 @@ class DoctorExtraInfor extends Component {
           )}
           {isShowDetailInfor === true && (
             <>
-              <div className="title-price">Giá Khám </div>
+              <div className="title-price">GIÁ KHÁM: </div>
               <div className="detail-infor">
                 <div className="price">
                   <span className="left">Giá Khám </span>
                   <span className="right">
-                    {extraInfor &&
-                      extraInfor.priceData &&
-                      language === LANGUAGES.VI && (
-                        <NumberFormat
-                          className="currency"
-                          value={extraInfor.priceData.valueVi}
-                          displayType={"text"}
-                          thousandSeparator={true}
-                          suffix={"VND"}
-                        />
-                      )}
-
-                    {extraInfor &&
-                      extraInfor.priceData &&
-                      language === LANGUAGES.EN && (
-                        <NumberFormat
-                          className="currency"
-                          value={extraInfor.priceData.valueEn}
-                          displayType={"text"}
-                          thousandSeparator={true}
-                          suffix={"USD"}
-                        />
-                      )}
+                    {extraInfor && extraInfor.priceData
+                      ? extraInfor.priceData.valueVi
+                      : ""}
                   </span>
                 </div>
                 <div className="note">
@@ -131,17 +111,12 @@ class DoctorExtraInfor extends Component {
                 </div>
               </div>
               <div className="payment">
-                Hình thức thanh toán
-                {extraInfor &&
-                extraInfor.paymentData &&
-                language === LANGUAGES.VI
-                  ? extraInfor.paymentData.valueVi
-                  : ""}
-                {extraInfor &&
-                extraInfor.paymentData &&
-                language === LANGUAGES.EN
-                  ? extraInfor.paymentData.valueEn
-                  : ""}
+                <span className="left">Hình thức thanh toán</span>
+                <span className="right">
+                  {extraInfor && extraInfor.paymentData
+                    ? extraInfor.paymentData.valueVi
+                    : ""}
+                </span>
               </div>
               <div className="hide-price">
                 <span onClick={() => this.showHideDetailInfor(false)}>

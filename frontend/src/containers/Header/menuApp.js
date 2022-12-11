@@ -12,20 +12,22 @@ export const adminMenu = [
         name: "menu.admin.crud-redux",
         link: "/system/admin-manage",
       },
+
       {
         name: "menu.admin.manage-doctor",
         link: "/system/manage-doctor",
-        // subMenus: [
-        //   {
-        //     name: "menu.system.system-administrator.user-manage",
-        //     link: "/system/user-manage",
-        //   },
-        //   {
-        //     name: "menu.system.system-administrator.product-manage",
-        //     link: "/system/user-redux",
-        //   },
-        // ],
+        subMenus: [
+          {
+            name: "menu.admin.doctor-redux",
+            link: "/system/doctor-redux",
+          },
+          {
+            name: "menu.admin.manage-doctor",
+            link: "/system/manage-doctor",
+          },
+        ],
       },
+
       // {
       //   name: "menu.admin.manage-admin",
       //   link: "/system/user-admin",
@@ -85,21 +87,21 @@ export const adminMenu = [
     ],
   },
 
-  // {
-  //   //quan ly biểu đô
+  {
+    //quan ly biểu đô
 
-  //   name: "menu.admin.chart",
-  //   menus: [
-  //     {
-  //       name: "menu.admin.manage-chart",
-  //       link: "/system/manage-chart",
-  //     },
-  //     // {
-  //     //   name: "menu.admin.manage-handbook-list",
-  //     //   link: "/system/manage-handbook-list",
-  //     // },
-  //   ],
-  // },
+    name: "menu.admin.chart",
+    menus: [
+      {
+        name: "menu.admin.manage-chart",
+        link: "/system/manage-chart",
+      },
+      //     // {
+      //     //   name: "menu.admin.manage-handbook-list",
+      //     //   link: "/system/manage-handbook-list",
+      //     // },
+    ],
+  },
 
   // {
   //   //quan ly Doanh thu
