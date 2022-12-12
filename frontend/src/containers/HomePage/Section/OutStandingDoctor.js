@@ -72,7 +72,6 @@ class OutStandingDoctor extends Component {
                   }
 
                   let nameVi = `${item.positionData.valueVi}, ${item.lastName} ${item.firstName}`;
-                  let nameEn = `${item.positionData.valueEn}, ${item.firstName} ${item.lastName}`;
                   return (
                     <div
                       className="section-customize"
@@ -87,10 +86,8 @@ class OutStandingDoctor extends Component {
                           />
                         </div>
                         <div className="position text-center">
-                          <div>
-                            {language === LANGUAGES.VI ? nameVi : nameEn}
-                          </div>
-                          <div>Cơ xương khớp</div>
+                          <div>{nameVi}</div>
+                          {/* <div>Cơ xương khớp</div> */}
                         </div>
                       </div>
                     </div>

@@ -118,11 +118,11 @@ class ProfileDoctor extends Component {
           </div>
         </div>
 
-        {/* {isShowLinkDetail === true && (
+        {isShowLinkDetail === true && (
           <div className="view-detail-doctor">
             <Link to={`/detail-doctor/${doctorId}`}>Xem thêm ...</Link>
           </div>
-        )} */}
+        )}
         {isShowPrice === true && (
           <div className="price">
             Giá khám: &nbsp;
