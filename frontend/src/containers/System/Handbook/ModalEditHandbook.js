@@ -94,7 +94,9 @@ class ModalEdit extends Component {
           className={"modal-user-container"}
           size="xl"
         >
-          <ModalHeader toggle={() => this.toggle()}>Edit cẩm nang</ModalHeader>
+          <ModalHeader toggle={() => this.toggle()}>
+            Chỉnh sửa cẩm nang
+          </ModalHeader>
           <ModalBody>
             <div className="modal-user-body">
               <div className="input-container">

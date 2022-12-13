@@ -79,7 +79,7 @@ class Login extends Component {
               <input
                 type="text"
                 className="form-control"
-                placeholder="Enter your username"
+                placeholder="Nhập tên người dùng"
                 value={this.state.username}
                 onChange={(event) => this.handleOnChangeUsername(event)}
               />
@@ -90,7 +90,7 @@ class Login extends Component {
                 <input
                   type={this.state.isShowPassword ? "text" : "password"}
                   className="form-control"
-                  placeholder="Enter your passwod"
+                  placeholder="Nhập mật khẩu"
                   onChange={(event) => this.handleOnChangePassword(event)}
                   onKeyDown={(event) => this.handleKeyDown(event)}
                 />

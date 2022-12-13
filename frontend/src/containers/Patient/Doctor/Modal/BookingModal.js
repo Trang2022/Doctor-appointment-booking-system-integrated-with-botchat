@@ -216,6 +216,7 @@ class BookingModal extends Component {
                     onChange={(event) =>
                       this.handleOnchangeInput(event, "fullName")
                     }
+                    placeholder="Nhập họ và tên"
                   />
                 </div>
                 <div className="col-6 form-group">
@@ -226,6 +227,7 @@ class BookingModal extends Component {
                     onChange={(event) =>
                       this.handleOnchangeInput(event, "phoneNumber")
                     }
+                    placeholder="Nhập số điện thoại"
                   />
                 </div>
                 <div className="col-6 form-group">
@@ -236,6 +238,7 @@ class BookingModal extends Component {
                     onChange={(event) =>
                       this.handleOnchangeInput(event, "email")
                     }
+                    placeholder="Nhập địa chỉ Email"
                   />
                 </div>
                 <div className="col-6 form-group">
@@ -246,6 +249,7 @@ class BookingModal extends Component {
                     onChange={(event) =>
                       this.handleOnchangeInput(event, "address")
                     }
+                    placeholder="Nhập địa chỉ liên lạc"
                   />
                 </div>
                 <div className="col-12 form-group">
@@ -256,6 +260,7 @@ class BookingModal extends Component {
                     onChange={(event) =>
                       this.handleOnchangeInput(event, "reason")
                     }
+                    placeholder="Nhập lý do khám"
                   />
                 </div>
                 <div className="col-6 form-group">
@@ -264,6 +269,7 @@ class BookingModal extends Component {
                     className="form-control"
                     value={this.state.birthday}
                     onChange={this.handleOnchangeDatePicker}
+                    placeholder="Nhập ngày sinh"
                   />
                 </div>
                 <div className="col-6 form-group">
@@ -272,6 +278,7 @@ class BookingModal extends Component {
                     value={this.state.selectedGender}
                     onChange={this.handleChangeSelect}
                     options={this.state.genders}
+                    placeholder="Nhập giới tính"
                   />
                 </div>
               </div>
