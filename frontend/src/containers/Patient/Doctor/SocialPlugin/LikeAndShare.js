@@ -14,8 +14,7 @@ class LikeAndShare extends Component {
       window.FB.XFBML.parse();
     }
 
-    let { language } = this.props;
-    let locale = language === LANGUAGES.VI ? "vi_VN" : "en_US";
+    let locale = "vi_VN";
     window.fbAsyncInit = function() {
       window.FB.init({
         appId: process.env.REACT_APP_FACEBOOK_APP_ID,
@@ -43,11 +42,11 @@ class LikeAndShare extends Component {
         <div
           className="fb-like"
           data-href={"https://developers.facebook.com/docs/plugins/"}
-          data-width=""
-          data-layout="button_count"
+          // data-layout="button_count"
           data-action="like"
           data-size="small"
           data-share="true"
+          // data-width="500px"
         ></div>
       </>
     );
