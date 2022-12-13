@@ -101,7 +101,7 @@ class ProfileDoctor extends Component {
             }}
           ></div>
           <div className="content-right">
-            <div className="up">{nameDoctor}</div>
+            <h2 className="up">{nameDoctor}</h2>
             <div className="down">
               {isShowDescriptionDoctor === true ? (
                 <>
