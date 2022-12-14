@@ -246,7 +246,7 @@ class UserRedux extends Component {
 
     return (
       <div className="user-redux-container">
-        <div className="title">User redux</div>
+        <div className="title">Quản lý tài khoản bác sĩ</div>
         <div className="user-redux-body">
           <div>
             <div className="container">
@@ -308,15 +308,7 @@ class UserRedux extends Component {
                     }
                   />
                 </div>
-                <div className="col-9">
-                  <label>Địa chỉ </label>
-                  <input
-                    className="form-control"
-                    type="text"
-                    value={address}
-                    onChange={(event) => this.onChangeInput(event, "address")}
-                  />
-                </div>
+
                 <div className="col-3">
                   <label>Giới tính </label>
                   <select
@@ -360,13 +352,12 @@ class UserRedux extends Component {
                   </div>
                 </div>
 
-                <div className="col-3">
+                {/* <div className="col-3">
                   <label>Vai trò </label>
                   <select
                     className="form-control"
                     value={role}
                     onChange={(event) => this.onChangeInput(event, "role")}
-                    value={role}
                   >
                     {roles &&
                       roles.length > 0 &&
@@ -380,7 +371,7 @@ class UserRedux extends Component {
                         );
                       })}
                   </select>
-                </div>
+                </div> */}
 
                 <div className="col-3">
                   <label>Chức danh </label>
@@ -388,20 +379,26 @@ class UserRedux extends Component {
                     className="form-control"
                     value={position}
                     onChange={(event) => this.onChangeInput(event, "position")}
-                    value={position}
                   >
                     {positions &&
                       positions.length > 0 &&
                       positions.map((item, index) => {
                         return (
                           <option key={index} value={item.keyMap}>
-                            {language === LANGUAGES.VI
-                              ? item.valueVi
-                              : item.valueEn}
+                            {item.valueVi}
                           </option>
                         );
                       })}
                   </select>
+                </div>
+                <div className="col-9">
+                  <label>Địa chỉ </label>
+                  <input
+                    className="form-control"
+                    type="text"
+                    value={address}
+                    onChange={(event) => this.onChangeInput(event, "address")}
+                  />
                 </div>
                 <div className="col-12 my-3">
                   <button

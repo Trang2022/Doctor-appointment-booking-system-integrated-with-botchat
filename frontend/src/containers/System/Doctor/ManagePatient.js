@@ -104,12 +104,12 @@ class ManagePatient extends Component {
       this.setState({
         isShowLoading: false,
       });
-      toast.success("Send Remedy succeeds!: ");
+      toast.success("Gửi email thành công! ");
     } else {
       this.setState({
         isShowLoading: false,
       });
-      toast.error("Something wrongs...  ");
+      toast.error("Gửi email thất bại!");
       // console.log("Error send remedy: ",res);
     }
   };
@@ -171,7 +171,7 @@ class ManagePatient extends Component {
                                 onClick={() => this.handleBtnConfirm(item)}
                                 className="mp-btn-confirm"
                               >
-                                Gửi hóa đơn
+                                Gửi đơn thuốc
                               </button>
                               {/* <button className="mp-btn-cancel">Hủy</button>
                               <button

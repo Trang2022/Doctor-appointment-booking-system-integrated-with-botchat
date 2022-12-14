@@ -153,7 +153,7 @@ let updateUserData = (data) => {
 
       if (!data.id || !data.roleId || !data.positionId || !data.gender) {
         resolve({
-          errCode: 2,
+          errCode: "Lưu thay đổi thành công!",
           errMessage: "Missing required parameters",
         });
       }

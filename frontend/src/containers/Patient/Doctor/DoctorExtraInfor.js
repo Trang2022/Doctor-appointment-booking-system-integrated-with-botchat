@@ -118,6 +118,8 @@ class DoctorExtraInfor extends Component {
                     : ""}
                 </span>
               </div>
+              {/* <span className="note">Ưu tiên thanh toán trực tuyến</span> */}
+
               <div className="hide-price">
                 <span onClick={() => this.showHideDetailInfor(false)}>
                   Ẩn bảng giá{" "}

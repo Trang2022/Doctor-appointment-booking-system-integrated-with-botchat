@@ -60,7 +60,7 @@ let postBookAppointment = (data) => {
         }
         resolve({
           errCode: 0,
-          errMessage: "Save infor patient succeed!",
+          errMessage: "Lưu thông tin bệnh nhân thành công!",
         });
       }
     } catch (e) {
@@ -91,12 +91,12 @@ let postVerifyBookAppointment = (data) => {
           await appointment.save();
           resolve({
             errCode: 0,
-            errMessage: "Update the appointment successed",
+            errMessage: "Cập nhật cuộc hẹn thành công",
           });
         } else {
           resolve({
             errCode: 2,
-            errMessage: "Appointment has been activated or does not exits",
+            errMessage: "Lịch hẹn đã được kích hoạt hoặc không có lịch hẹn",
           });
         }
       }
@@ -134,7 +134,7 @@ let postPatientPayment = (data) => {
 
         resolve({
           errCode: 0,
-          errMessage: "Save infor patient succeed!",
+          errMessage: "Lưu thông tin bệnh nhân thành công!",
         });
       }
     } catch (e) {

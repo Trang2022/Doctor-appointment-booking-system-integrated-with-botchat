@@ -83,7 +83,7 @@ class ModalEditUser extends Component {
             this.toggle();
           }}
         >
-          Edit a new user
+          Chỉnh sửa người dùng
         </ModalHeader>
         <ModalBody>
           <div className="modal-user-body">
@@ -99,7 +99,7 @@ class ModalEditUser extends Component {
               />
             </div>
             <div className="input-container">
-              <label>Password</label>
+              <label>Mật khẩu</label>
               <input
                 type="password"
                 onChange={(event) => {
@@ -110,7 +110,7 @@ class ModalEditUser extends Component {
               />
             </div>
             <div className="input-container">
-              <label>First name</label>
+              <label>Tên</label>
               <input
                 type="text"
                 onChange={(event) => {
@@ -120,7 +120,7 @@ class ModalEditUser extends Component {
               />
             </div>
             <div className="input-container">
-              <label>Last name</label>
+              <label>Họ</label>
               <input
                 type="text"
                 onChange={(event) => {
@@ -130,7 +130,7 @@ class ModalEditUser extends Component {
               />
             </div>
             <div className="input-container">
-              <label>Address</label>
+              <label>Địa chỉ liên hệ</label>
               <input
                 type="text"
                 onChange={(event) => {
@@ -149,7 +149,7 @@ class ModalEditUser extends Component {
               this.handleSaveUser();
             }}
           >
-            save changes
+            Lưu thay đổi
           </Button>
           <Button
             color="secondary"
@@ -158,7 +158,7 @@ class ModalEditUser extends Component {
               this.toggle();
             }}
           >
-            Close
+            Đóng
           </Button>
         </ModalFooter>
       </Modal>

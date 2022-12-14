@@ -93,11 +93,11 @@ class ManageSchedule extends Component {
     let { rangeTime, selectedDoctor, currentDate } = this.state;
     let result = [];
     if (!currentDate) {
-      toast.error("Invalid date ! ");
+      toast.error("Ngày không hợp lệ! ");
       return;
     }
     if (selectedDoctor && _.isEmpty(selectedDoctor)) {
-      toast.error("Invalid select !!!");
+      toast.error("Không hợp lệ !!!");
       return;
     }
     // console.log("current", currentDate);
@@ -115,7 +115,7 @@ class ManageSchedule extends Component {
           result.push(object);
         });
       } else {
-        toast.error("Invalid select !!!");
+        toast.error("Không hợp lệ !!!");
         return;
       }
     }
@@ -128,9 +128,9 @@ class ManageSchedule extends Component {
       formatedDate: formatedDate,
     });
     if (res && res.errCode === 0) {
-      toast.success("Save infor succeed! ");
+      toast.success("Lưu thông tin thành công! ");
     } else {
-      toast.error("error saveBulkScheduleDocto ");
+      toast.error("Lỗi lưu lịch khám bác sĩ! ");
       console.log("error saveBulkScheduleDocto >>> res: ", res);
     }
   };

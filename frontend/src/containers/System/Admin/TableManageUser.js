@@ -52,10 +52,10 @@ class TableManageUser extends Component {
             <tr>
               <th>STT</th>
               <th>Email</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Address</th>
-              <th>Action</th>
+              <th>Tên</th>
+              <th>Họ</th>
+              <th>Địa chỉ liên lạc</th>
+              <th>Hành động</th>
             </tr>
             {/* </tbody> */}
             {/* <tbody> */}

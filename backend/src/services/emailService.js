@@ -14,13 +14,13 @@ let sendSimpleEmail = async (dataSend) => {
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: '"BookingCare " <quachthingoctrang10@gmail.com>', // sender address
+    from: '"Website đặt lịch khám bệnh " <booking@gmail.com>', // sender address
     to: dataSend.reciverEmail, // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world?", // plain text body
     html: `
     <h3>Xin chào ${dataSend.patientName}!</h3>
-    <p>Bạn nhận được email này vì đã đặt lịch khám bệnh online trên BookingCare
+    <p>Bạn nhận được email này vì đã đặt lịch khám bệnh online trên Website đặt lịch khám bệnh
     <p>Thông tin đặt lịch khám bệnh:</p>
     <div><b>Thời gian: ${dataSend.time}</b></div>
     <div><b>Bác sĩ: ${dataSend.doctorName}</b></div>
@@ -35,7 +35,7 @@ let sendSimpleEmail = async (dataSend) => {
 };
 let getBodyHTMLEmailRemedy = (dataSend) => {
   let result = `<h3>Xin chào ${dataSend.patientName}</h3>
-  <p>Bạn nhận được mail này vì đã đặt lịch khám bệnh trên BookingCare </p>
+  <p>Bạn nhận được mail này vì đã đặt lịch khám bệnh trên Website đặt lịch khám bệnh </p>
   <p>Thông tin đơn thuốc/hóa đơn được gửi trong file đính kém </p>
   <div> Xin chân thành cảm ơn </div>
   
@@ -55,7 +55,7 @@ let sendAttachment = async (dataSend) => {
         },
       });
       let info = await transporter.sendMail({
-        from: 'Mail từ BoookingCare "<bookingcare@gmail.com>',
+        from: 'Mail từ Website đặt lịch khám bệnh "<booking@gmail.com>',
         to: dataSend.email,
         subject: "Kết quả đặt lịch khám bệnh",
         html: getBodyHTMLEmailRemedy(dataSend),

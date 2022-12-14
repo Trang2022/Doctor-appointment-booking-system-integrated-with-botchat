@@ -139,13 +139,13 @@ class UserManage extends Component {
             editUser={this.doEditUser}
           />
         )}
-        <div className="title text-center">Manage users</div>
+        <div className="title text-center">Quản lý người dùng</div>
         <div className="mx-1">
           <button
             className="btn btn-primary px-3"
             onClick={() => this.handleAddNewUser()}
           >
-            <i className="fas fa-plus"></i> Add new users
+            <i className="fas fa-plus"></i> Thêm người dùng mới
           </button>
         </div>
         <div className="users-table mt-3 m-1">
@@ -153,10 +153,10 @@ class UserManage extends Component {
             <tbody>
               <tr>
                 <th>Email</th>
-                <th>First name</th>
-                <th>Last name</th>
-                <th>Address</th>
-                <th>Actions</th>
+                <th>Tên</th>
+                <th>Họ</th>
+                <th>Địa chỉ liên hệ</th>
+                <th>Hành động</th>
               </tr>
               {arrUsers &&
                 arrUsers.map((item, index) => {
