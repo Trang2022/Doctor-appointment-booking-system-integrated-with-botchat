@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <div style={{ textAlign: "center" }}>
-      <h1>BIỂU ĐỒ THỐNG KÊ THEO THÁNG</h1>
+      <div className="chart">BIỂU ĐỒ THỐNG KÊ THEO THÁNG</div>
       <div className="App">
         <PieChart width={400} height={400}>
           <Pie
