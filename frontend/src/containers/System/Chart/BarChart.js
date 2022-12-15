@@ -21,7 +21,7 @@ const App = () => {
             data={data}
             cx={200}
             cy={200}
-            outerRadius={80}
+            outerRadius={150}
             fill="#8884d8"
             label
           />

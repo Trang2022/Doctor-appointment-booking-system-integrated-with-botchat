@@ -72,7 +72,7 @@ class RemedyModal extends Component {
           centered
         >
           <div className="modal-header">
-            <h5 className="modal-title">Gửi hóa đơn khám bệnh </h5>
+            <h5 className="modal-title">Gửi đơn thuốc khám bệnh </h5>
             <button
               className="close"
               type="button"

@@ -87,21 +87,21 @@ export const adminMenu = [
     ],
   },
 
-  {
-    //quan ly biểu đô
+  // {
+  //quan ly biểu đô
 
-    name: "menu.admin.chart",
-    menus: [
-      {
-        name: "menu.admin.manage-chart",
-        link: "/system/manage-chart",
-      },
-      //     // {
-      //     //   name: "menu.admin.manage-handbook-list",
-      //     //   link: "/system/manage-handbook-list",
-      //     // },
-    ],
-  },
+  //   name: "menu.admin.chart",
+  //   menus: [
+  //     {
+  //       name: "menu.admin.manage-chart",
+  //       link: "/system/manage-chart",
+  //     },
+  //     //     // {
+  //     //     //   name: "menu.admin.manage-handbook-list",
+  //     //     //   link: "/system/manage-handbook-list",
+  //     //     // },
+  //   ],
+  // },
 
   // {
   //   //quan ly Doanh thu

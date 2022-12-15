@@ -51,7 +51,7 @@ class System extends Component {
                 path="/system/manage-handbook-list"
                 component={ManageHandbookList}
               />
-              <Route path="/system/manage-chart" component={BarChart} />
+              {/* <Route path="/system/manage-chart" component={BarChart} /> */}
               <Route
                 component={() => {
                   return <Redirect to={systemMenuPath} />;
