@@ -4,7 +4,7 @@
       "manage-user": "Người dùng",
       "manage-doctor": "Quản lý bác sĩ thông tin",
       "manage-admin": "Quản lý admin",
-      "crud": "CRUD User",
+      "crud": "Quản lý người dùng",
       "crud-redux": "CRUD Redux",
       "clinic": "Phòng khám",
       "manage-clinic": "Quản lý phòng khám",
