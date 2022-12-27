@@ -34,7 +34,6 @@ Chương 5: Sử dụng Redux trong dự án React
 3. CRUD với Redux
 
 
-
 Chương 6: Hoàn thiện section Thông tin Bác Sĩ 
 1. Đọc, Ghi File với MySQL (save images as BLOB)
 2. Markdown tạo blog
