@@ -48,9 +48,9 @@ class HomeHeader extends Component {
               </div>
               <div className="child-content">
                 <div>
-                  <b>Chọn bác sĩ giỏi </b>
+                  <b>Bác sĩ </b>
                 </div>
-                <div className="subs-title">Bác sĩ </div>
+                <div className="subs-title">Bác sĩ Chọn bác sĩ giỏi </div>
               </div>
               <div className="child-content">
                 <div>

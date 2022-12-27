@@ -21,8 +21,15 @@ class MenuGroup extends Component {
 
 class Menu extends Component {
   render() {
-    const { name, active, link, children, onClick, hasSubMenu, onLinkClick } =
-      this.props;
+    const {
+      name,
+      active,
+      link,
+      children,
+      onClick,
+      hasSubMenu,
+      onLinkClick,
+    } = this.props;
     return (
       <li
         className={
@@ -196,12 +203,11 @@ class Navigator extends Component {
                 <MenuGroupWithRouter name={group.name}>
                   {group.menus
                     ? group.menus.map((menu, menuIndex) => {
-                        const isMenuHasSubMenuActive =
-                          this.isMenuHasSubMenuActive(
-                            location,
-                            menu.subMenus,
-                            menu.link
-                          );
+                        const isMenuHasSubMenuActive = this.isMenuHasSubMenuActive(
+                          location,
+                          menu.subMenus,
+                          menu.link
+                        );
                         const isSubMenuOpen =
                           this.state.expandedMenu[
                             groupIndex + "_" + menuIndex
